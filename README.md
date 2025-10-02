@@ -1,108 +1,107 @@
 # 🛒 Target Brazil E-commerce Analysis: SQL Business Intelligence Case Study
 
-**End-to-end SQL-driven business intelligence project analyzing 100,000+ e-commerce orders from Target’s Brazilian operations (2016–2018) to uncover growth opportunities, optimize logistics, and enhance customer satisfaction.**
+**End-to-end SQL-driven business intelligence project analyzing 100,000+ e-commerce orders from Target’s Brazilian operations (2016–2018).**  
 
-![SQL](https://img.shields.io/badge/SQL-BigQuery-blue)
-![Cloud](https://img.shields.io/badge/Google-Cloud-orange?logo=googlecloud)
-![Status](https://img.shields.io/badge/Status-Complete-success)
-![License](https://img.shields.io/badge/License-MIT-green)
+![SQL](https://img.shields.io/badge/SQL-BigQuery-blue)  
+![Cloud](https://img.shields.io/badge/Google-Cloud-orange?logo=googlecloud)  
+![Status](https://img.shields.io/badge/Status-Complete-success)  
+![License](https://img.shields.io/badge/License-MIT-green)  
 ![Analysis](https://img.shields.io/badge/Focus-Business_Intelligence-orange)
 
 ---
 
-## 📌 Executive Summary
-This project uses **Google BigQuery + advanced SQL** to analyze Target’s e-commerce expansion in Brazil. Covering 1M+ records across 8 interconnected tables, the study evaluates **market growth, operational efficiency, customer behavior, and payment trends**, delivering **strategic recommendations** for revenue growth, logistics optimization, and customer satisfaction improvement.
+## 📌 Executive Summary  
+This project uses **Google BigQuery + advanced SQL** to analyze Target’s e-commerce expansion in Brazil. Covering 1M+ records across 8 related tables, it provides insights on **market growth, logistics, payment behavior**, and delivers **strategic recommendations**.
 
 ---
 
-## 📋 Table of Contents
-- [Business Context](#business-context)
-- [Dataset Overview](#dataset-overview)
-- [Entity Relationship Diagram](#entity-relationship-diagram)
-- [Key Business Questions](#key-business-questions)
-- [Technical Implementation](#technical-implementation)
-- [Key Findings](#key-findings)
-- [Business Recommendations](#business-recommendations)
-- [Repository Structure](#repository-structure)
-- [How to Reproduce](#how-to-reproduce)
-- [Technologies Used](#technologies-used)
-- [Limitations & Next Steps](#limitations--next-steps)
+## 📋 Table of Contents  
+- [Business Context](#business-context)  
+- [Dataset Overview](#dataset-overview)  
+- [Entity Relationship Diagram](#entity-relationship-diagram)  
+- [Key Business Questions](#key-business-questions)  
+- [Technical Implementation](#technical-implementation)  
+- [Key Findings](#key-findings)  
+- [Business Recommendations](#business-recommendations)  
+- [Repository Structure](#repository-structure)  
+- [How to Reproduce](#how-to-reproduce)  
+- [Technologies Used](#technologies-used)  
+- [Limitations & Next Steps](#limitations--next-steps)  
 - [Connect With Me](#connect-with-me)
 
 ---
 
-## 🎯 Business Context
-Target expanded its retail presence into Brazil between 2016–2018. The goal of this project is to answer:  
-**“How can Target optimize operations in Brazil to increase revenue, improve delivery, and strengthen customer loyalty?”**  
+## 🎯 Business Context  
+Target expanded into Brazil between 2016–2018. The goal is to analyze how operations can be optimized to increase revenue, improve delivery, and boost customer loyalty.
 
 ---
 
-## 📊 Dataset Overview
+## 📊 Dataset Overview  
 | Table | Records | Description |
-|-------|---------|-------------|
-| `orders` | 99,441 | Order lifecycle and status |
-| `customers` | 99,441 | Customer demographics and location |
-| `order_items` | 112,650 | Items, sellers, and pricing |
-| `payments` | 103,886 | Payment method and value |
+|---|---|---|
+| `orders` | 99,441 | Order lifecycle data |
+| `customers` | 99,441 | Customer demographics & location |
+| `order_items` | 112,650 | Items per order, seller, price |
+| `payments` | 103,886 | Payment methods and values |
 | `products` | 32,951 | Product catalog |
-| `sellers` | 3,095 | Seller details |
-| `geolocation` | 1,000,163 | Postal codes and coordinates |
-| `order_reviews` | 99,224 | Customer reviews and ratings |
+| `sellers` | 3,095 | Seller metadata |
+| `geolocation` | 1,000,163 | Postal codes with lat/long |
+| `order_reviews` | 99,224 | Customer feedback and ratings |
 
 **Period:** Sep 2016 – Oct 2018  
-**Scope:** 27 Brazilian states | **Volume:** 1M+ records  
+**Scope:** 27 Brazilian states | **Size:** 1M+ records total  
 
 ---
 
-## 📌 Entity Relationship Diagram
-![ERD](Database%20Schema%20Diagram.png)
+## 📌 Entity Relationship Diagram  
+![ERD](Database%20Schema%20Diagram.png)  
 
 ---
 
-## ❓ Key Business Questions
-1. **Market Growth** → How have orders and revenue evolved over time?  
-2. **Geographic Reach** → Which states show high vs low penetration?  
-3. **Operational Efficiency** → How accurate are deliveries vs estimates?  
-4. **Payment Trends** → Which methods drive higher order values?  
-5. **Customer Satisfaction** → What factors influence review scores?  
+## ❓ Key Business Questions  
+1. Market Growth → How have orders & revenue trended over time?  
+2. Geographic Reach → Which states are underpenetrated or saturated?  
+3. Delivery Efficiency → Are deliveries meeting estimated timelines?  
+4. Payment Patterns → Which payment methods correlate with higher values?  
+5. Customer Satisfaction → What factors drive high review scores?  
 
 ---
 
-## 🔧 Technical Implementation
+## 🔧 Technical Implementation  
 - **Platform:** Google BigQuery (Standard SQL)  
-- **Data Size:** ~1.2 GB across 8 linked tables  
+- **Data Size:** ~1.2 GB across 8 tables  
 - **SQL Techniques:**  
   - Multi-table joins & nested queries  
-  - Window functions (ranking, moving averages)  
-  - CTEs for modular queries  
-  - Geographic aggregations (state, city-level)  
-  - Date/time functions for trend analysis  
-  - Percentiles & variance for performance metrics  
+  - Window functions (rank, moving averages)  
+  - CTEs for modular logic  
+  - Geographic aggregations (state, city)  
+  - Date/time functions & trend analysis  
+  - Percentile & variance calculations  
 
 ---
 
-## 📈 Key Findings
-- **Revenue Growth:** 135.6% YoY increase (2017 → 2018).  
-- **Market Concentration:** São Paulo contributes 42% of customers.  
-- **Operational Performance:** 96.5% orders delivered on time; avg delivery = 12.5 days.  
-- **Payment Trends:** 74% use credit cards; 24% adopt installments.  
-- **Growth Gap:** 17 states <1% penetration → untapped market.  
+## 📈 Key Findings  
+- Revenue grew **135.6% YoY** between 2017 & 2018  
+- São Paulo holds ~42% of customer base  
+- 96.5% of orders delivered on time; avg delivery = 12.5 days  
+- 74% of payments via credit cards; 24% used installments  
+- 17 states <1% penetration → large growth potential  
 
 ---
 
-## 🎯 Business Recommendations
-### Immediate (0–3 months)
-- Strengthen logistics in bottom 5 states.  
-- Expand installment payment options.  
-- Stock planning for August demand surge.  
+## 🎯 Business Recommendations  
+### Short-term (0–3 months)  
+- Improve logistics in low-performing states  
+- Broaden installment payment options  
+- Prepare inventory for August peak  
 
-### Strategic (3–12 months)
-- Target underpenetrated states with <1% share.  
-- Build local fulfillment centers in metro regions.  
-- Deploy predictive analytics for demand forecasting.  
+### Mid-term (3–12 months)  
+- Launch campaigns in underpenetrated states  
+- Build micro-fulfillment centers in high-potential zones  
+- Implement predictive analytics for demand forecasting  
 
-**Expected Impact:** +15–20% revenue, +10% delivery satisfaction, -12% logistics costs.  
+**Expected Impact:** +15–20% revenue, +10% delivery satisfaction, –12% logistic costs  
 
 ---
 
-## 📁 Repository Structure
+## 📁 Repository Structure  
