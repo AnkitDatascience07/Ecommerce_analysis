@@ -36,10 +36,10 @@ scope boundaries, and gives us confidence in our subsequent findings.
 
 -- 1.1 Data type exploration of customers table
 -- Understanding the structure helps with future joins and analysis planning
-```sql
+```
 SELECT * FROM `TARGET_SQL_DATASET.Customers`
 LIMIT 10;
-
+‎```
 
 SELECT * FROM `TARGET_SQL_DATASET.Geolocation`
 LIMIT 5; 
@@ -413,6 +413,7 @@ SELECT
 FROM installment_stats ins
 CROSS JOIN total_orders tot
 ORDER BY ins.payment_installments;
+
 
 
 
