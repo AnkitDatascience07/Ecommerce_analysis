@@ -4,15 +4,6 @@
 
 The Target Brazil dataset consists of 8 interconnected tables containing comprehensive e-commerce transaction data from September 2016 to October 2018.
 
-## Table Relationships
-
-```
-customers ←→ orders ←→ order_items ←→ products
-    ↓         ↓           ↓
-geolocation   payments    sellers
-              ↑
-        order_reviews
-```
 
 ## Table Definitions
 
