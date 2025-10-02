@@ -148,38 +148,6 @@ target-brazil-ecommerce-analysis/
 └── LICENSE                                # MIT License
 ```
 
-## 🚀 How to Reproduce
-
-### **Prerequisites**
-- Google Cloud Platform account with BigQuery access
-- Target Brazil e-commerce dataset uploaded to BigQuery
-- Basic SQL knowledge for query execution
-
-### **Steps**
-1. **Setup:** Create BigQuery project and import dataset
-2. **Execute:** Run queries from `sql/complete_analysis.sql` sequentially
-3. **Analyze:** Review results against business questions
-4. **Validate:** Cross-reference findings with expected outcomes
-
-### **Dataset Requirements**
-- Ensure all 8 tables are properly imported with correct schemas
-- Verify data quality and completeness before analysis
-- Confirm date ranges align with analysis period (2016-2018)
-
-## 🛠 Technologies Used
-
-- **Google BigQuery** - Cloud data warehouse and analytics platform
-- **SQL** - Data querying and analysis language
-- **Git** - Version control for project management
-- **Markdown** - Documentation and reporting
-
-## 💼 Business Value Delivered
-
-This analysis transforms raw transactional data into strategic insights that directly impact:
-- **Revenue Growth:** Data-driven expansion strategies
-- **Operational Efficiency:** Logistics optimization opportunities  
-- **Customer Experience:** Regional delivery improvements
-- **Market Intelligence:** Competitive positioning insights
 
 ## 🤝 Connect With Me
 
